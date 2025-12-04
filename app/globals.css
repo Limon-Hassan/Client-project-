@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@theme {
+  --font-Wix_Madefor_Text: 'Wix Madefor Text', sans-serif;
+}
+
+@theme {
+  --animate-wiggle: wiggle 3s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+}
