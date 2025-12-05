@@ -8,14 +8,14 @@ const Navber = () => {
   let pathName = usePathname();
   const links = [
     { name: 'Home', href: '/' },
-    { name: 'Features', href: '#' },
+    { name: 'Features', href: '/pegination' },
     { name: 'Testimonials', href: '#' },
     { name: 'About', href: '#' },
     { name: 'Contact', href: '#' },
   ];
   return (
     <>
-      <nav className="bg-transparent border-b border-gray-300 py-3 group hover:bg-gray-300/30 transition-all ease-in-out duration-300">
+      <nav className="fixed top-0 left-0 w-full z-50  border-b border-gray-300 py-3 group hover:bg-gray-300/30 transition-all ease-in-out duration-300">
         <Container>
           <div className="flex items-center justify-between relative">
             <div className="flex items-center gap-3.5">
@@ -28,7 +28,7 @@ const Navber = () => {
                 Website Deft
               </h1>
             </div>
-            <div className="flex items-center justify-center gap-1 group-hover:bg-gray-100 bg-gray-300/30 rounded-full w-[800px] h-[70px]">
+            <div className="flex items-center justify-center gap-1 group-hover:bg-gray-100 bg-gray-200 rounded-full w-[800px] h-[70px]">
               {links.map((link, i) => {
                 const isActive = pathName === link.href;
 
