@@ -71,8 +71,6 @@ const Section3 = () => {
   const sectionRef = useRef(null);
   const section4Ref = useRef(null);
 
- 
-
   useEffect(() => {
     const section = sectionRef.current;
     const textEl = textRef.current;
@@ -96,12 +94,12 @@ const Section3 = () => {
 
     ScrollTrigger.create({
       trigger: section,
-      start: 'center center', 
+      start: 'center center',
       end: 'bottom top',
       pin: section,
       pinSpacing: false,
       scrub: true,
-      anticipatePin: 1, 
+      anticipatePin: 1,
     });
 
     if (section4El) {
@@ -109,7 +107,7 @@ const Section3 = () => {
         section4El,
         { y: 100 },
         {
-          y: 0, 
+          y: 0,
           ease: 'none',
           scrollTrigger: {
             trigger: section,
@@ -126,7 +124,6 @@ const Section3 = () => {
 
   return (
     <>
-     
       <section
         ref={sectionRef}
         className="min-h-screen flex items-center justify-center"
@@ -141,8 +138,9 @@ const Section3 = () => {
           </h2>
         </Container>
       </section>
-
-      <Section4 ref={section4Ref} style={{ transform: 'translateY(0px)' }} />
+      <section ref={section4Ref} style={{ transform: 'translateY(0px)' }}>
+        <Section4 />
+      </section>
     </>
   );
 };
