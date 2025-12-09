@@ -1,11 +1,180 @@
 import React from 'react';
-import Card1 from './cards/Card1';
+import Container from './container/Container';
+import { GrStatusGood } from 'react-icons/gr';
 
 const Section5 = () => {
   return (
-    <div className=''>
-     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ullam, illum facilis laudantium tempore reprehenderit in magnam saepe aspernatur maxime commodi asperiores provident fugiat tenetur! Sit aspernatur similique consequuntur voluptates, voluptate maxime dolorum ullam sequi ipsum tenetur sed itaque in maiores quas incidunt saepe! Molestias iure deserunt corrupti alias recusandae explicabo repudiandae sed culpa quisquam consectetur eaque veniam, ipsum sapiente quae provident fugit soluta mollitia eos accusamus officia vero repellendus? Consequatur, in ut. Incidunt quod aliquid fugit maxime nam voluptatum dolore enim. Nihil cumque, modi non, soluta blanditiis dolore reprehenderit pariatur provident accusantium omnis quasi quae itaque inventore voluptatibus nulla! Voluptatem eum enim laudantium deleniti, veniam dignissimos voluptatibus tempore rerum non id commodi ipsum. Quia et voluptates ipsam nesciunt ratione, voluptatem quibusdam doloremque nihil natus? Tenetur, dolor quis a dolorem sapiente sit optio consequatur cupiditate, quia nobis debitis? Perspiciatis quisquam error cum possimus. Nihil quo quibusdam nobis porro est in ullam illum quisquam earum veritatis repellendus, quam pariatur odit iste dolores, rerum repellat provident consectetur qui. Voluptatibus nihil voluptatum, iusto vitae atque obcaecati! Consequuntur minima unde quaerat inventore quod corrupti recusandae, eveniet tenetur adipisci ab! Dolor, amet maxime. Corporis ut reiciendis enim eum. Voluptatum numquam ipsum rem ex! Impedit quas ipsam nobis distinctio nostrum! Ab, iusto! Delectus, soluta animi perspiciatis fugit culpa, accusantium rerum, labore aspernatur necessitatibus sit optio! Corrupti libero error iusto. Temporibus delectus accusamus sit numquam quaerat, aliquid id cumque! Alias, animi fuga at maxime accusamus ea dolorum, voluptas rerum blanditiis tenetur incidunt voluptatum nihil quas tempore magni ut ex quos? Soluta pariatur consequuntur voluptatum esse, corrupti harum omnis commodi dolorem fuga. Libero odio quas, fuga voluptas temporibus molestias voluptatem sint optio, ea harum vel deleniti porro saepe odit? Facere totam consequatur vero, animi earum similique voluptatum error, ut cumque doloribus quisquam hic nostrum culpa illum dignissimos iste possimus illo voluptatem eaque ab tempore fuga voluptate veritatis. Quod rem nihil repellendus sapiente exercitationem, molestiae deserunt voluptatum sed fugit quibusdam sint quasi quaerat laborum inventore asperiores? Obcaecati dolore repellendus pariatur, aperiam delectus excepturi sapiente saepe, id ex, quasi nemo. Deleniti esse omnis velit voluptas sed ullam cumque, natus repellendus ut tempore et, repellat dolorum necessitatibus excepturi. Expedita maxime, id hic sed architecto earum quibusdam accusantium doloremque voluptas! Quo voluptatem ducimus maiores quod, molestias amet aliquid praesentium, error consequatur unde reprehenderit alias illum voluptatibus architecto! Soluta doloremque nam voluptate nemo maiores, optio veniam rem id molestias, ipsum aliquam. Molestias nostrum esse debitis eveniet deleniti. Architecto neque exercitationem a distinctio adipisci voluptatem quas ipsam repellat blanditiis! Illum necessitatibus facere nulla reprehenderit suscipit facilis architecto minus, cupiditate adipisci eveniet doloribus magnam temporibus earum tempore? Impedit sapiente obcaecati, ipsum soluta assumenda labore quaerat dicta, ratione numquam doloremque perspiciatis corrupti adipisci explicabo fugiat beatae debitis sunt. Aspernatur eveniet doloribus nobis facilis repellat soluta eum nulla voluptatem placeat aut modi, ea ad distinctio tenetur inventore dicta esse quisquam labore maxime mollitia ab voluptate incidunt odit. Cum eaque praesentium corporis placeat est odit quas aperiam, similique a repellendus? Dolorum dignissimos repellat, consectetur mollitia quis eum deserunt tempora sunt cupiditate ipsum quae ullam totam autem quia nulla eius asperiores veniam fugiat, saepe unde debitis aut iste optio in? Molestiae illum earum exercitationem natus, nihil quae. Iure harum velit in! Consequuntur tenetur corporis adipisci eius iste eligendi, ratione hic incidunt quas veniam reprehenderit expedita dolor modi velit quidem amet saepe eos quod eum odit debitis quisquam error eveniet dolorum. Dolores, obcaecati! Voluptatibus tenetur iure, id consectetur laborum doloribus amet perspiciatis tempore laudantium mollitia nesciunt natus, explicabo iusto odit quaerat harum consequuntur. Debitis, architecto animi quidem ea illum quod consequuntur officia unde voluptates suscipit reiciendis mollitia delectus maiores quo!
-    </div>
+    <>
+      <section className="flex items-center justify-center mt-[100px] mb-[50px] ">
+        <Container>
+          <div className="mx-auto">
+            <h2 className="text-[40px] text-center font-Wix_Madefor_Text font-normal text-black">
+              Choose your pricing plan
+            </h2>
+            <h5 className="text-[20px] text-center font-Wix_Madefor_Text font-normal text-black mt-2.5 mb-[50px]">
+              Find one that works for you
+            </h5>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <div className="w-[500px] h-[800px] relative">
+              <img
+                className="w-full h-auto object-cover"
+                src="/cardImage.avif"
+                alt="cardImage"
+              />
+              <div className="bg-[#5919C1] text-white mx-auto absolute top-[148px] left-1/2 transform -translate-x-1/2 w-[100px] h-6 flex items-center justify-center">
+                Best Value
+              </div>
+              <div className=" mx-auto border-x border-gray-300 border-b">
+                <h4 className="text-center text-[20px] font-Wix_Madefor_Text font-normal pt-[30px]">
+                  Basic
+                </h4>
+                <h3 className="text-center text-[60px] font-normal relative">
+                  <span className="text-2xl absolute top-1 left-[180px] ">
+                    $
+                  </span>
+                  4.99
+                </h3>
+                <h6 className="text-center mx-auto text-sm -mt-4">
+                  Every month
+                </h6>
+                <p className="text-center mx-auto text-[16px] font-normal font-Wix_Madefor_Text my-[30px] ">
+                  To get the first impression of our capabilities
+                </p>
+                <h6 className="text-center mx-auto text-sm mb-5">
+                  Valid until canceled
+                </h6>
+                <button className="text-center flex items-center justify-center mx-auto text-[20px] font-normal bg-[#5919C1] px-[200px] py-3 rounded-sm text-white hover:opacity-80 transition-all ease-in-out duration-300 cursor-pointer mb-[30px]">
+                  Select
+                </button>
+                <hr className="w-[450px] h-px opacity-50 mx-auto " />
+                <h5 className="text-center mx-auto flex items-center gap-3 justify-center my-5 text-sm text-gray-500 font-normal ">
+                  <GrStatusGood size={17} />
+                  Access to essential AI tools
+                </h5>
+                <hr className="w-[450px] h-px opacity-50 mx-auto " />
+                <h5 className="text-center mx-auto flex items-center gap-3 justify-center my-5 text-sm text-gray-500 font-normal ">
+                  <GrStatusGood size={17} />
+                  Limited translation processing capacity
+                </h5>
+                <hr className="w-[450px] h-px opacity-50 mx-auto " />
+                <h5 className="text-center mx-auto flex items-center gap-3 justify-center my-5 text-sm text-gray-500 font-normal mb-20 ">
+                  <GrStatusGood size={17} />
+                  Basic customer support
+                </h5>
+              </div>
+            </div>
+            <div className="w-[500px] h-[800px] relative">
+              <img
+                className="w-full h-auto object-cover"
+                src="/cardImage.avif"
+                alt="cardImage"
+              />
+              <div className="bg-[#5919C1] text-white mx-auto absolute top-[148px] left-1/2 transform -translate-x-1/2 w-[100px] h-6 flex items-center justify-center">
+                Best Value
+              </div>
+              <div className=" mx-auto border-x border-gray-300 border-b">
+                <h4 className="text-center text-[20px] font-Wix_Madefor_Text font-normal pt-[30px]">
+                  Standard
+                </h4>
+                <h3 className="text-center text-[60px] font-normal relative">
+                  <span className="text-2xl absolute top-1 left-[180px] ">
+                    $
+                  </span>
+                  9.99
+                </h3>
+                <h6 className="text-center mx-auto text-sm -mt-4">
+                  Every month
+                </h6>
+                <p className="text-center mx-auto text-[16px] font-normal font-Wix_Madefor_Text my-[30px] ">
+                  Designed for growing businesses
+                </p>
+                <h6 className="text-center mx-auto text-sm mb-5">
+                  Valid until canceled
+                </h6>
+                <button className="text-center flex items-center justify-center mx-auto text-[20px] font-normal bg-[#5919C1] px-[200px] py-3 rounded-sm text-white hover:opacity-80 transition-all ease-in-out duration-300 cursor-pointer mb-[30px]">
+                  Select
+                </button>
+                <hr className="w-[450px] h-px opacity-50 mx-auto " />
+                <h5 className="text-center mx-auto flex items-center gap-3 justify-center my-5 text-sm text-gray-500 font-normal ">
+                  <GrStatusGood size={17} />
+                  Expanded translation processing capacity
+                </h5>
+                <hr className="w-[450px] h-px opacity-50 mx-auto " />
+                <h5 className="text-center mx-auto flex items-center gap-3 justify-center my-5 text-sm text-gray-500 font-normal ">
+                  <GrStatusGood size={17} />
+                  Enhanced AI algorithms models
+                </h5>
+                <hr className="w-[450px] h-px opacity-50 mx-auto " />
+                <h5 className="text-center mx-auto flex items-center gap-3 justify-center my-5 text-sm text-gray-500 font-normal ">
+                  <GrStatusGood size={17} />
+                  Access to additional data sources and integrations
+                </h5>
+                <hr className="w-[450px] h-px opacity-50 mx-auto " />
+                <h5 className="text-center mx-auto flex items-center gap-3 justify-center my-5 text-sm text-gray-500 font-normal ">
+                  <GrStatusGood size={17} />
+                  Priority customer support
+                </h5>
+              </div>
+            </div>
+            <div className="w-[500px] h-[800px] relative">
+              <img
+                className="w-full h-auto object-cover"
+                src="/cardImage.avif"
+                alt="cardImage"
+              />
+              <div className="bg-[#5919C1] text-white mx-auto absolute top-[148px] left-1/2 transform -translate-x-1/2 w-[100px] h-6 flex items-center justify-center">
+                Best Value
+              </div>
+              <div className=" mx-auto border-x border-gray-300 border-b">
+                <h4 className="text-center text-[20px] font-Wix_Madefor_Text font-normal pt-[30px]">
+                  Premium
+                </h4>
+                <h3 className="text-center text-[60px] font-normal relative">
+                  <span className="text-2xl absolute top-1 left-[180px] ">
+                    $
+                  </span>
+                  17.99
+                </h3>
+                <h6 className="text-center mx-auto text-sm -mt-4">
+                  Every month
+                </h6>
+                <p className="text-center mx-auto text-[16px] font-normal font-Wix_Madefor_Text my-[30px] ">
+                  Tailored for large enterprises and organizations
+                </p>
+                <h6 className="text-center mx-auto text-sm mb-5">
+                  Valid until canceled
+                </h6>
+                <button className="text-center flex items-center justify-center mx-auto text-[20px] font-normal bg-[#5919C1] px-[200px] py-3 rounded-sm text-white hover:opacity-80 transition-all ease-in-out duration-300 cursor-pointer mb-[30px]">
+                  Select
+                </button>
+                <hr className="w-[450px] h-px opacity-50 mx-auto " />
+                <h5 className="text-center mx-auto flex items-center gap-3 justify-center my-5 text-sm text-gray-500 font-normal ">
+                  <GrStatusGood size={17} />
+                  Highly scalable infrastructure
+                </h5>
+                <hr className="w-[450px] h-px opacity-50 mx-auto " />
+                <h5 className="text-center mx-auto flex items-center gap-3 justify-center my-5 text-sm text-gray-500 font-normal ">
+                  <GrStatusGood size={17} />
+                  Advanced and complex generative capabilities
+                </h5>
+                <hr className="w-[450px] h-px opacity-50 mx-auto " />
+                <h5 className="text-center mx-auto flex items-center gap-3 justify-center my-5 text-sm text-gray-500 font-normal ">
+                  <GrStatusGood size={17} />
+                  Comprehensive data security and compliance
+                </h5>
+                <hr className="w-[450px] h-px opacity-50 mx-auto " />
+                <h5 className="text-center mx-auto flex items-center gap-3 justify-center my-5 text-sm text-gray-500 font-normal ">
+                  <GrStatusGood size={17} />
+                  Flexible contract options
+                </h5>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+    </>
   );
 };
 

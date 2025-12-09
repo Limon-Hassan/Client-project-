@@ -540,12 +540,10 @@ const Section3 = () => {
     const c2 = card2Ref.current;
     const c3 = card3Ref.current;
 
-    // Initial positions
     gsap.set(c1, { y: 300, x: 1500, rotate: 60 });
     gsap.set(c2, { y: 700, x: 1560, rotate: 60 });
     gsap.set(c3, { y: 700, x: 1620, rotate: 60 });
 
-    // 1️⃣ FIRST TIMELINE — CARDS ENTER
     const tlEnter = gsap.timeline({ paused: true });
 
     tlEnter
@@ -562,7 +560,7 @@ const Section3 = () => {
           x: 0,
           y: 0,
           rotate: 0,
-          duration: 1,
+          duration: 2,
           ease: 'power2.out',
         },
         '+=0.2'
@@ -573,7 +571,7 @@ const Section3 = () => {
           x: 0,
           y: 0,
           rotate: 0,
-          duration: 1,
+          duration: 3,
           ease: 'power2.out',
         },
         '+=0.2'
@@ -599,7 +597,7 @@ const Section3 = () => {
           rotate: 0,
           top: 300,
           right: -150,
-          duration: 1,
+          duration: 2,
           ease: 'power2.out',
         },
         '-=0.8'
@@ -612,13 +610,12 @@ const Section3 = () => {
           rotate: 0,
           top: 300,
           right: -350,
-          duration: 1,
+          duration: 3,
           ease: 'power2.out',
         },
         '-=0.8'
       );
 
-    // 3️⃣ MAIN SCROLLTRIGGER
     ScrollTrigger.create({
       trigger: section4,
       start: 'top top',
@@ -629,11 +626,9 @@ const Section3 = () => {
       onUpdate: self => {
         const totalProgress = self.progress;
 
-        // First half → show cards
         if (totalProgress < 0.5) {
           tlEnter.progress(totalProgress / 0.5);
         }
-        // Second half → move cards to bottom
         else {
           tlBottom.progress((totalProgress - 0.5) / 0.5);
         }

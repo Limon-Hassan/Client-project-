@@ -27,3 +27,39 @@ body {
   box-shadow: 0px 0px 6px 5px rgb(0, 0, 0, 0.1);
   border-radius: 10px;
 }
+
+
+.bg-services-gradient {
+  background-image: radial-gradient(
+      circle at 78.76790364583334% 88.77604166666667%,
+      #19C159 0%,
+      29.5%,
+      rgba(25,193,89,0) 59%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      #8CE0AC 0%,
+      16.2%,
+      rgba(140,224,172,0) 54%
+    ),
+    radial-gradient(
+      circle at 21.380208333333332% 20.244140625%,
+      #5919C1 0%,
+      60%,
+      rgba(89,25,193,0) 100%
+    ),
+    radial-gradient(
+      circle at 76.6357421875% 24.270833333333332%,
+      #5919C1 0%,
+      63.6%,
+      rgba(89,25,193,0) 100%
+    ),
+    radial-gradient(
+      circle at 48.9013671875% 49.521484375%,
+      #212121 0%,
+      100%,
+      rgba(33,33,33,0) 100%
+    );
+  background-repeat: no-repeat;
+  background-size: cover;
+}
