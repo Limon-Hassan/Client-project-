@@ -18,6 +18,9 @@ const Section6 = () => {
     const section = sectionRef.current;
     const text = textRef.current;
 
+      const sectionHeight = section.offsetHeight;
+      const stopY = sectionHeight - 300;
+
     gsap.set(text, { y: 100, fontSize: 40 });
 
     const tl = gsap.timeline({
@@ -36,7 +39,7 @@ const Section6 = () => {
     });
 
     tl.to(text, {
-      y: 2200,
+      y: stopY,
       duration: 0.7,
       ease: 'none',
     });
@@ -51,35 +54,34 @@ const Section6 = () => {
     gsap.set(c2, { x: -800, y: 0 });
     gsap.set(c3, { x: 0, y: 500 });
 
-    const tl = gsap.timeline({
+    const joinTL = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: () => `top+=${window.innerHeight / 3}px center`,
+        start: 'top center',
+        end: 'top top',
+        scrub: true,
+      },
+    });
+
+    joinTL.to([c1, c2, c3], {
+      x: 0,
+      y: 0,
+      ease: 'power2.out',
+    });
+
+    const moveUpTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top top',
         end: 'bottom top',
         scrub: true,
       },
     });
 
-    tl.to(
-      [c1, c2, c3],
-      {
-        x: 0,
-        y: 0,
-
-        ease: 'power2.out',
-      },
-      0
-    );
-
-    tl.to(
-      [c1, c2, c3],
-      {
-        y: 300,
-
-        ease: 'power1.inOut',
-      },
-      1
-    );
+    moveUpTL.to([c1, c2, c3], {
+      y: 0,
+      ease: 'power1.inOut',
+    });
   }, []);
 
   return (
@@ -93,7 +95,7 @@ const Section6 = () => {
         </h2>
         <div
           ref={circleRef1}
-          className="w-[450px] h-[450px] rounded-full bg-purple-200/20 flex items-center justify-center mx-auto"
+          className="w-[450px] h-[450px] rounded-full bg-purple-200/20 flex items-center justify-center mx-auto "
         >
           <div
             ref={circleRef2}
