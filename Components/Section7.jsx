@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Container from './container/Container';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { GoArrowRight } from 'react-icons/go';
 gsap.registerPlugin(ScrollTrigger);
 
 const Section7 = () => {
@@ -101,6 +102,15 @@ const Section7 = () => {
             <h4 className="text-end mr-2.5 text-[35px] font-Wix_Madefor_Text font-normal text-black">
               App Development & Maintenance
             </h4>
+            <button className="absolute top-20 right-[330px] text-[18px] font-Wix_Madefor_Text font-normal text-white w-[220px] h-[50px] flex items-center justify-center gap-2 rounded-full bg-green-500 hover:bg-[#5919C1] hover:border border-black hover:font-medium ease-in-out transition-all duration-200 group cursor-pointer hover:text-[20px]">
+              <span className="border-2 border-white w-[25px] h-[25px] rounded-full flex items-center justify-center ">
+                <GoArrowRight
+                  className="group-hover:-rotate-270 transition-all ease-in-out duration-200"
+                  size={17}
+                />
+              </span>
+              Get A Free Quote
+            </button>
           </div>
         </div>
       </Container>
