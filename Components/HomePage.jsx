@@ -16,7 +16,6 @@ import Fotter from './Fotter';
 const HomePage = () => {
   return (
     <>
-      <Navber />
       <Section1 />
       <Section2 />
       <Section3 />
@@ -28,7 +27,6 @@ const HomePage = () => {
       <Section9 />
       <Section10 />
       <Section11 />
-      <Fotter />
     </>
   );
 };

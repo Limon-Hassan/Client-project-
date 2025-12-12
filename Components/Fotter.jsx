@@ -7,7 +7,7 @@ import { RiTwitterXLine } from 'react-icons/ri';
 
 const Fotter = () => {
   return (
-    <div className="mb-[50px]">
+    <div className="mb-[50px] mt-[100px]">
       <Container>
         <div>
           <div className="flex gap-[200px] mb-[100px]">

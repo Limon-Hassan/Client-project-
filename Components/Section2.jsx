@@ -1,14 +1,46 @@
-import React from 'react';
+"use client";
+
+import React, { useEffect, useRef } from 'react';
 import Container from './container/Container';
+import gsap from 'gsap';
 
 const Section2 = () => {
+    const boxRef = useRef(null);
+
+    useEffect(() => {
+      const elem = boxRef.current;
+
+      gsap.set(elem, { opacity: 0, y: 50 });
+
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              gsap.to(elem, {
+                opacity: 1,
+                y: 0,
+                duration: 1.1,
+                ease: 'power3.out',
+              });
+
+              observer.unobserve(elem); 
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+
+      observer.observe(elem);
+
+      return () => observer.disconnect();
+    }, []);
   return (
     <>
-      <section className=''>
+      <section>
         <Container>
           <h3 className='text-[25px] font-Wix_Madefor_Text font-normal text-black ml-80'>#1 Ranked in State 5 consecutive years</h3>
           <div className="flex items-center justify-center mt-2">
-            <div className="flex items-center gap-3">
+            <div ref={boxRef} className="flex items-center gap-3">
               <div className="w-[300px] h-auto p-3 hover:bg-green-400/10 hover:border-t border-red-400 transition-all ease-in-out duration-300">
                 <h2 className="text-5xl font-normal mb-2 text-gray-400">
                   2,100

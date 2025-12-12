@@ -1,5 +1,7 @@
 import { Wix_Madefor_Text } from "next/font/google";
 import "./globals.css";
+import Navber from "@/Components/Navber";
+import Fotter from "@/Components/Fotter";
 
 
 const Text = Wix_Madefor_Text({
@@ -19,7 +21,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${Text.variable}  antialiased`}
       >
+
+        <Navber />
         {children}
+        <Fotter />
       </body>
     </html>
   );

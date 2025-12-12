@@ -8,7 +8,7 @@ const Navber = () => {
   let pathName = usePathname();
   const links = [
     { name: 'Home', href: '/' },
-    { name: 'Features', href: '/pegination' },
+    { name: 'Features', href: '/features' },
     { name: 'Testimonials', href: '#' },
     { name: 'About', href: '#' },
     { name: 'Contact', href: '#' },
