@@ -1,11 +1,31 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Container from './container/Container';
 import { usePathname } from 'next/navigation';
 import { GoArrowRight } from 'react-icons/go';
 
 const Navber = () => {
   let pathName = usePathname();
+  const [showNav, setShowNav] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setShowNav(false);
+      } else {
+        setShowNav(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
   const links = [
     { name: 'Home', href: '/' },
     { name: 'Features', href: '/features' },
@@ -15,7 +35,12 @@ const Navber = () => {
   ];
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-50  border-b border-gray-300 py-3 group hover:bg-gray-300/30 transition-all ease-in-out duration-300">
+      <nav
+        className={`fixed top-0 left-0 w-full z-50 border-b border-gray-300 py-3
+  transition-transform duration-500 ease-in-out
+  ${showNav ? 'translate-y-0' : '-translate-y-full'}
+  group hover:bg-gray-300/30`}
+      >
         <Container>
           <div className="flex items-center justify-between relative">
             <div className="flex items-center gap-3.5">
